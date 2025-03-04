@@ -162,7 +162,10 @@ header nav .toggle-menu {
   position: relative;
 }
 .landing .overlay {
-  background-color: rgb(61, 73, 76, 0.7);
+  /* background-color: rgb(61, 73, 76, 0.7); */
+  background-image: url("../images/6.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
   position: absolute;
   top: 0;
   left: 0;
@@ -331,6 +334,7 @@ header nav .toggle-menu {
   padding: 50px;
   display: flex;
   background-image: url("../images/pexels-monoar-rahman-22660-109371.jpg");
+  background-size: cover;
   justify-content: space-between;
 }
 .design .overlay img {
@@ -512,13 +516,15 @@ header nav .toggle-menu {
 .about img {
   max-width: 100%;
   position: relative;
-  bottom: -180px;
+  bottom: -200px;
   margin-top: -180px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 @media screen and (max-width: 767px) {
   .about img {
-    bottom: -60px;
-    margin-top: -60px;
+    bottom: -120px;
+    margin-top: -120px;
   }
 }
 /* end about */
@@ -707,3 +713,331 @@ header nav .toggle-menu {
   top: -12px;
 }
 /* end our-skills */
+/* start quote*/
+.quote {
+  height: 200px;
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-image: url("../images/6.jpeg");
+  background-size: cover;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.quote::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgb(0 0 0 / 75%);
+}
+.quote .container {
+  position: relative;
+}
+.quote q {
+  font-size: 30px;
+  margin-bottom: 20px;
+  display: block;
+}
+/* end quote */
+/* start pricing  */
+.pricing {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+.pricing .plans {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}
+.pricing .plans .plan {
+  background-color: #fcfcfc;
+  text-align: center;
+  position: relative;
+}
+.pricing .plans .plan .head {
+  padding: 40px 20px;
+  border-top: 1px solid var(--maincolor);
+  border-bottom: 1px solid var(--maincolor);
+}
+.pricing .plans .plan h3 {
+  font-weight: normal;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.pricing .plans .plan span {
+  font-size: 60px;
+  font-weight: bold;
+}
+.pricing .plans .plan span::before {
+  content: "$";
+  position: relative;
+  top: -40px;
+  right: 15px;
+  font-size: 25px;
+  font-weight: normal;
+}
+.pricing .plans .plan span::after {
+  content: "/Mo";
+  position: relative;
+  font-size: 20px;
+  left: 15px;
+  font-weight: normal;
+}
+.pricing .plans .plan ul {
+  border-bottom: 1px solid var(--maincolor);
+}
+.pricing .plans .plan ul li {
+  padding: 20px;
+  position: relative;
+}
+.pricing .plans .plan ul li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  background-color: var(--maincolor);
+  width: 50%;
+  bottom: 0;
+  left: 25%;
+}
+.pricing .container .plans .plan .foot a {
+  padding: 10px 20px;
+  text-decoration: none;
+  display: block;
+  border: 1px solid var(--maincolor);
+  width: fit-content;
+  margin: 30px auto;
+}
+.pricing .container .contact-text {
+  text-align: center;
+  color: #555;
+  margin: 50px 0 25px;
+  font-weight: bold;
+}
+.pricing .container > a {
+  display: block;
+  text-align: center;
+  padding: 10px 30px;
+  background-color: var(--maincolor);
+  width: fit-content;
+  margin-inline: auto;
+  text-decoration: none;
+  border-radius: 10px;
+  color: #fff;
+}
+/* end pricing  */
+/* start subscribe */
+.subscribe {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-image: url("../images/download.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  min-height: 200px;
+}
+.subscribe::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgb(0 0 0 / 75%);
+}
+.subscribe .container {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: inherit;
+  position: relative;
+  gap: 50px;
+  z-index: 1;
+}
+@media screen and (max-width: 991px) {
+  .subscribe .container {
+    flex-direction: column;
+  }
+}
+.subscribe .container form {
+  display: flex;
+  position: relative;
+  max-width: 100%;
+}
+.subscribe .container form input[type="email"] {
+  padding: 20px 20px 20px 60px;
+  background-color: transparent;
+  /* background:none */
+  color: #fff;
+  border: 1px solid #ccc;
+  caret-color: var(--maincolor);
+  width: calc(100%-130px);
+
+  border-right: none;
+  text-transform: uppercase;
+}
+.subscribe .container form input[type="submit"] {
+  width: 130px;
+  background-color: var(--maincolor);
+  border: 1px solid #ccc;
+  border-left: none;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.subscribe .container form ::placeholder {
+  color: white;
+}
+.subscribe .container form i {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+}
+.subscribe .container p {
+  width: 350px;
+  max-width: 100%;
+}
+.subscribe .container form input[type="email"]:focus,
+.subscribe .container form input[type="submit"]:focus {
+  outline: none;
+}
+@media screen and (max-width: 991px) {
+  .subscribe .container p {
+    width: 350px;
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .subscribe .container form input[type="email"] {
+    padding: 10px 10px 10px 40px;
+    width: 150px;
+  }
+  .subscribe .container form input[type="submit"] {
+    width: auto;
+    padding: 5px 10px;
+  }
+}
+/* end subscribe */
+/* start contact */
+.contact {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+}
+.contact .content {
+  display: flex;
+  justify-content: space-between;
+}
+.contact .content form {
+  flex-basis: 70%;
+}
+.contact .content form .main-input {
+  width: 100%;
+  padding: 20px;
+  display: block;
+  border: 1px solid #ccc;
+  margin-bottom: 30px;
+}
+.contact .content form textarea.main-input {
+  height: 200px;
+}
+.contact .content form .main-input:focus {
+  outline: none;
+}
+.contact .content form ::placeholder {
+  text-transform: uppercase;
+}
+.contact .content form input[type="submit"] {
+  background-color: var(--maincolor);
+  padding: 20px;
+  border: none;
+  display: flex;
+  margin-left: auto;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.contact .content .info {
+  flex-basis: 25%;
+}
+.contact .content .info h4 {
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  font-weight: 500;
+  font-size: 18px;
+}
+.contact .content .info span {
+  display: block;
+  color: var(--colorParagraph);
+  margin-bottom: 10px;
+}
+.contact .content .info h4:nth-of-type(2) {
+  margin-top: 90px;
+}
+.contact .content .info address {
+  color: var(--colorParagraph);
+  line-height: 2;
+}
+@media screen and (max-width: 767px) {
+  .contact .content {
+    flex-direction: column;
+  }
+  .contact .content .info {
+    order: -1;
+    text-align: center;
+  }
+  .contact .content .info h4:nth-of-type(2) {
+    margin-top: 25px;
+  }
+  .contact .content .info address {
+    margin-bottom: 30px;
+  }
+}
+/* end contact */
+/* start footer */
+.footer {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
+  background-image: url("../images//8.jpeg");
+  background-size: cover;
+  position: relative;
+  color: #fff;
+  text-align: center;
+}
+.footer::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgb(0 0 0 / 60%);
+}
+.footer .container {
+  position: relative;
+}
+.footer img {
+  margin-bottom: 30px;
+}
+.footer p:not(.copyright) {
+  padding: 20px;
+  border-bottom: 1px solid #fff;
+  width: fit-content;
+  margin-inline: auto;
+  text-transform: uppercase;
+}
+.footer .social-icons i {
+  padding: 8px;
+  font-size: 15px;
+}
+.footer .copyright {
+  margin-top: 50px;
+}
+.footer .copyright span {
+  color: var(--maincolor);
+  padding-inline: 5px;
+  font-weight: bold;
+}
+/* end footer */
