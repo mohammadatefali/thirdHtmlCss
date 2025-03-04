@@ -1,2 +1,2 @@
-Make it your work
-Always care and update
+Make it your work.
+Always care and update.
